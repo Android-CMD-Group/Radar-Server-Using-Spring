@@ -15,7 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 @Component
-@Path("/reading")
+@Path("/trap")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, "application/x-javascript"})
 public class TrapReportService {
 	private static final Logger log = Logger.getLogger(TrapReportService.class);
@@ -32,14 +32,13 @@ public class TrapReportService {
 	public TrapInfo getTrapInfo() {
 		log.debug("get was gotten");
 		TrapInfo trap = new TrapInfo();
-		trap.setAndroidID("12345678990");
+		trap.setId("12345678990");
 		trap.setAccuracy(0);
 		trap.setBearing(0);
 		trap.setLoc(null);
 		trap.setSpeed(2);
-		trap.setTimeAtLocation(1212);
-		trap.setTimeAtShake(8989);
+		trap.setTimeOfLocation(1212);
+		trap.setTimeReported(8989);
 		return trap;
-		
 	}
 }
