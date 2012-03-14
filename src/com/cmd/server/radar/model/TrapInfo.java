@@ -98,7 +98,7 @@ public class TrapInfo {
 
 
 	public String toString(){
-		return "" + " " + speed + " " + accuracy + " " + bearing + " " + timeReported + " " + timeOfLocation + " " + id;
+		return "" + loc[0] +" "+ loc[1] +" "+" " + speed + " " + accuracy + " " + bearing + " " + timeReported + " " + timeOfLocation + " " + id;
 		
 	}
 }
